@@ -2,6 +2,7 @@ package pl.allegro.promo.devoxx2015.domain;
 
 public class Offer {
 
+    public static final double PRETTY_THRESHOLD = 0.7;
     private final String id;
     private final String title;
     private final String photoUrl;
@@ -31,6 +32,6 @@ public class Offer {
     }
 
     public boolean hasPrettyPhoto() {
-        return photoScore >= 0.7;
+        return photoScore >= PRETTY_THRESHOLD;
     }
 }
